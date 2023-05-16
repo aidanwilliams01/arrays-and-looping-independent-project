@@ -4,6 +4,12 @@ function beepBoop(inputNumber) {
     if (index === 0) {
       outputString = '0';
     }
+    else if (index.toString().includes('3')) {
+      outputString = `${outputString}, Won't you be my neighbor?`;
+    }
+    else if (index.toString().includes('2')) {
+      outputString = `${outputString}, Boop!`;
+    }
     else if (index.toString().includes('1')) {
       outputString = `${outputString}, Beep!`;
     }
