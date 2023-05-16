@@ -7,3 +7,7 @@ Expected Output: '0'
 Test: "It should return a string with all integers from 0 to the input number"
 Code: beepBoop(9);
 Expected Output: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9'
+
+Test: "It should return a string with all integers containing 1 replaced with 'Beep!'"
+Code: beepBoop(9);
+Expected Output: '0, Boop!, 2, 3, 4, 5, 6, 7, 8, 9'

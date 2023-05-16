@@ -4,6 +4,9 @@ function beepBoop(inputNumber) {
     if (index === 0) {
       outputString = '0';
     }
+    else if (index.toString().includes('1')) {
+      outputString = `${outputString}, Beep!`;
+    }
     else {
       outputString = `${outputString}, ${index}`;
     }
