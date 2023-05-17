@@ -57,8 +57,15 @@ function onPageLoad() {
   const form = document.querySelector("form");
   function formSubmission(event) {
     event.preventDefault();
+    const submissionType = document.activeElement.value;
     const inputNumber = document.querySelector("input").value;
-    const outputString = beepBoop(inputNumber);
+    let outputString = '';
+    if (submissionType === 'reverse') {
+      outputString = beepBoopReverse(inputNumber);
+    }
+    else {
+      outputString = beepBoop(inputNumber);
+    }
     document.querySelector("p").innerText = outputString;
   }
   form.addEventListener("submit", formSubmission);
