@@ -52,3 +52,16 @@ function beepBoopReverse(inputNumber) {
   }
   return outputString;
 }
+
+function onPageLoad() {
+  const form = document.querySelector("form");
+  function formSubmission(event) {
+    event.preventDefault();
+    const inputNumber = document.querySelector("input").value;
+    const outputString = beepBoop(inputNumber);
+    document.querySelector("p").innerText = outputString;
+  }
+  form.addEventListener("submit", formSubmission);
+}
+
+window.addEventListener("load", onPageLoad);
