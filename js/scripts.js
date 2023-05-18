@@ -67,6 +67,7 @@ function onPageLoad() {
     else {
       outputString = beepBoop(name, inputNumber);
     }
+    // document.querySelector("p").setAttribute("class", "results");
     document.querySelector("p").innerText = outputString;
   }
   form.addEventListener("submit", formSubmission);
