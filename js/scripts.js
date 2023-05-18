@@ -1,11 +1,11 @@
-function beepBoop(inputNumber) {
+function beepBoop(name, inputNumber) {
   let outputString = '';
   for (let index = 0; index <= inputNumber; index++) {
     if (index === 0) {
       outputString = '0';
     }
     else if (index.toString().includes('3')) {
-      outputString = `${outputString}, Won't you be my neighbor?`;
+      outputString = `${outputString}, ${name}, won't you be my neighbor?`;
     }
     else if (index.toString().includes('2')) {
       outputString = `${outputString}, Boop!`;
@@ -20,12 +20,12 @@ function beepBoop(inputNumber) {
   return outputString;
 }
 
-function beepBoopReverse(inputNumber) {
+function beepBoopReverse(name, inputNumber) {
   let outputString = '';
   for (let index = inputNumber; index >= 0; index--) {
     if (index === inputNumber) {
       if (index.toString().includes('3')) {
-        outputString = `Won't you be my neighbor?`;
+        outputString = `${name}, won't you be my neighbor?`;
       }
       else if (index.toString().includes('2')) {
         outputString = `Boop!`;
@@ -38,7 +38,7 @@ function beepBoopReverse(inputNumber) {
       }
     }
     else if (index.toString().includes('3')) {
-      outputString = `${outputString}, Won't you be my neighbor?`;
+      outputString = `${outputString}, ${name}, won't you be my neighbor?`;
     }
     else if (index.toString().includes('2')) {
       outputString = `${outputString}, Boop!`;
@@ -58,13 +58,14 @@ function onPageLoad() {
   function formSubmission(event) {
     event.preventDefault();
     const submissionType = document.activeElement.value;
-    const inputNumber = document.querySelector("input").value;
+    const name = document.querySelector("input#name").value;
+    const inputNumber = document.querySelector("input#number").value;
     let outputString = '';
     if (submissionType === 'reverse') {
-      outputString = beepBoopReverse(inputNumber);
+      outputString = beepBoopReverse(name, inputNumber);
     }
     else {
-      outputString = beepBoop(inputNumber);
+      outputString = beepBoop(name, inputNumber);
     }
     document.querySelector("p").innerText = outputString;
   }
