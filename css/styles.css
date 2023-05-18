@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 p {
   border: solid crimson;
   margin: 3%;
