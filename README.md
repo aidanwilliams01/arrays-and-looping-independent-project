@@ -1,3 +1,42 @@
+# _Mr. Roboger's Neighborhood_
+
+#### By _**Aidan Williams**_
+
+#### _A page that returns a string of numbers with certain substitutions._
+
+## Technologies Used
+
+* _HTML_
+* _CSS_
+* _Javascript_
+
+## Description
+
+_A page that takes a name and number from the user and returns a string of integers up to the input number. Some integers are replaced with text according to the following logic._
+
+_From most to least important:_
+* _Integers containing a 3 are replaced with the input name followed by ", won't you be my neighbor?"._
+* _Integers containing a 2 are replaced with "Boop!"._
+* _Integers containing a 1 are replaced with "Beep!"._
+
+_Results can also be returned in reverse order following the same logic._
+
+## Setup/Installation Requirements
+
+* _Clone this repository to your desktop._
+* _Navigate to the top level of the directory._
+* _Open index.html in your browser._
+
+## Known Bugs
+
+* _No known bugs._
+
+## License
+
+_[GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License)_
+
+Copyright (c) _2023_ _Aidan Williams_
+
 Describe: beepBoop()
 
 Test: "It should return a string with a 0 if the number 0 is inputted"
@@ -20,4 +59,4 @@ Describe: beepBoopReverse()
 
 Test: "It should follow the logic of beepBoop, but the returned string should be in reverse order."
 Code: beepBoop(30);
-Expected Output: 'Won't you be my neightbor?, 29, 28, 27...Won't you be my neighbor?, Boop!, Beep!, 0'
+Expected Output: 'Won't you be my neightbor?, Boop!, Boop!, Boop!...Won't you be my neighbor?, Boop!, Beep!, 0'
